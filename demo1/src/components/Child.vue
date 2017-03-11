@@ -1,12 +1,13 @@
 <template>
   <div class="template">
-     <input type="text" v-model="msg">
+     <input type="text" v-model="foo">
   </div>
 </template>
 <script>
   export default {
+    props:["foo"],
     data() {
-      return { msg: "son2" }
+      return { }
     }
   } 
 </script>

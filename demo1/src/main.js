@@ -1,7 +1,7 @@
 //引入vue包，这里可以直接使用模块的名字
   import Vue from 'vue';
 //引入app.vue组件
-  import App from './App.vue';
+  import Parent from './Parent.vue';
 
   new Vue({
     el:"#app",
@@ -10,5 +10,5 @@
     //     //将app组件渲染到页面上
     //   return (create(APP))
     // },
-    render:c=>c(App)
+    render:c=>c(Parent)
   })
