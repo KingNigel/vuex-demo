@@ -17,15 +17,10 @@
         msg:""
       }
     },
-    methods:{
-        foo: function (aaa) { 
-          console.log(aaa);
-        }
-    },
-    // events: {  
-    //    test: function (msg) {  
-    //             console.log(msg);  
-    //         } 
+    // methods:{
+    //     foo: function (aaa) { 
+    //       console.log(1);
+    //     }
     // },
     components:{
       son1:son1,
