@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 17);
+/******/ 	return __webpack_require__(__webpack_require__.s = 22);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -195,7 +195,7 @@ if (typeof DEBUG !== 'undefined' && DEBUG) {
   ) }
 }
 
-var listToStyles = __webpack_require__(16)
+var listToStyles = __webpack_require__(21)
 
 /*
 type StyleObject = {
@@ -417,21 +417,21 @@ function applyToTag (styleElement, obj) {
 
 
 /* styles */
-__webpack_require__(14)
+__webpack_require__(20)
 
 var Component = __webpack_require__(1)(
   /* script */
   __webpack_require__(7),
   /* template */
-  __webpack_require__(12),
+  __webpack_require__(17),
   /* scopeId */
   null,
   /* cssModules */
   null
 )
-Component.options.__file = "/Users/konglingtao/work/vuex-demo/demo1/src/Parent.vue"
+Component.options.__file = "/Users/konglingtao/work/banzhuan/src/App.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] Parent.vue: functional components are not supported with templates, they should use render functions.")}
+if (Component.options.functional) {console.error("[vue-loader] App.vue: functional components are not supported with templates, they should use render functions.")}
 
 /* hot reload */
 if (false) {(function () {
@@ -440,9 +440,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-1da59438", Component.options)
+    hotAPI.createRecord("data-v-e4b430cc", Component.options)
   } else {
-    hotAPI.reload("data-v-1da59438", Component.options)
+    hotAPI.reload("data-v-e4b430cc", Component.options)
   }
 })()}
 
@@ -6884,25 +6884,42 @@ process.umask = function() { return 0; };
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Child_vue__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Child_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_Child_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Son1_vue__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Son1_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_Son1_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_Son2_vue__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_Son2_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__components_Son2_vue__);
 //
 //
 //
 //
 //
+//
+//
+
+
+
 
 
 //曝露出对象
 /* harmony default export */ __webpack_exports__["default"] = {
   data() {
     return {
-      msg: "囧"
-
+      msg: ""
     };
   },
+  methods: {
+    foo: function (aaa) {
+      console.log(aaa);
+    }
+  },
+  // events: {  
+  //    test: function (msg) {  
+  //             console.log(msg);  
+  //         } 
+  // },
   components: {
-    child: __WEBPACK_IMPORTED_MODULE_0__components_Child_vue___default.a
+    son1: __WEBPACK_IMPORTED_MODULE_0__components_Son1_vue___default.a,
+    son2: __WEBPACK_IMPORTED_MODULE_1__components_Son2_vue___default.a
   }
 };
 
@@ -6918,35 +6935,34 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
 
 /* harmony default export */ __webpack_exports__["default"] = {
-    props: ["foo"],
-    data() {
-        return {};
-    }, methods: {
-        findParent: function () {
-            console.log(this.$parent); //访问根组件  
-            console.log(this.$parent.msg); //访问根组件的val属性  
-            console.log(this.$parent.$children.indexOf(this)); //查看当前能否在其父组件的子组件中找到索引  
-            console.log(this.$parent === this.$root); //查看父组件和根组件是不是全等的  
-        }
+  data() {
+    return { msg: "son" };
+  }, methods: {
+    childClick: function () {
+      this.$emit("test", this.msg);
     }
+  }
 };
 
 /***/ }),
 /* 9 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(0)();
-// imports
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
 
-
-// module
-exports.push([module.i, "\n.tpl{\r\n  color:pink\n}\r\n", ""]);
-
-// exports
-
+/* harmony default export */ __webpack_exports__["default"] = {
+  data() {
+    return { msg: "son2" };
+  }
+};
 
 /***/ }),
 /* 10 */
@@ -6966,23 +6982,51 @@ exports.push([module.i, "\n.template{\r\n  color:pink;\n}\r\n", ""]);
 /* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
+exports = module.exports = __webpack_require__(0)();
+// imports
+
+
+// module
+exports.push([module.i, "\n.template{\r\n  color:pink;\n}\r\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 12 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)();
+// imports
+
+
+// module
+exports.push([module.i, "\n.tpl{\r\n  color:pink\n}\r\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 13 */
+/***/ (function(module, exports, __webpack_require__) {
+
 
 /* styles */
-__webpack_require__(15)
+__webpack_require__(18)
 
 var Component = __webpack_require__(1)(
   /* script */
   __webpack_require__(8),
   /* template */
-  __webpack_require__(13),
+  __webpack_require__(15),
   /* scopeId */
   null,
   /* cssModules */
   null
 )
-Component.options.__file = "/Users/konglingtao/work/vuex-demo/demo1/src/components/Child.vue"
+Component.options.__file = "/Users/konglingtao/work/banzhuan/src/components/Son1.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] Child.vue: functional components are not supported with templates, they should use render functions.")}
+if (Component.options.functional) {console.error("[vue-loader] Son1.vue: functional components are not supported with templates, they should use render functions.")}
 
 /* hot reload */
 if (false) {(function () {
@@ -6991,9 +7035,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-6361c6dd", Component.options)
+    hotAPI.createRecord("data-v-2b495cf1", Component.options)
   } else {
-    hotAPI.reload("data-v-6361c6dd", Component.options)
+    hotAPI.reload("data-v-2b495cf1", Component.options)
   }
 })()}
 
@@ -7001,39 +7045,72 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 12 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "tpl"
-  }, [_c('child', {
-    attrs: {
-      "foo": "要传的值"
-    }
-  })], 1)
-},staticRenderFns: []}
-module.exports.render._withStripped = true
-if (false) {
+
+/* styles */
+__webpack_require__(19)
+
+var Component = __webpack_require__(1)(
+  /* script */
+  __webpack_require__(9),
+  /* template */
+  __webpack_require__(16),
+  /* scopeId */
+  null,
+  /* cssModules */
+  null
+)
+Component.options.__file = "/Users/konglingtao/work/banzhuan/src/components/Son2.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] Son2.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
   module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-1da59438", module.exports)
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-2b577472", Component.options)
+  } else {
+    hotAPI.reload("data-v-2b577472", Component.options)
   }
-}
+})()}
+
+module.exports = Component.exports
+
 
 /***/ }),
-/* 13 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "template"
-  }, [_c('p', [_vm._v(_vm._s(_vm.foo))]), _vm._v(" "), _c('input', {
+  }, [_c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.msg),
+      expression: "msg"
+    }],
     attrs: {
       "type": "text"
     },
+    domProps: {
+      "value": _vm._s(_vm.msg)
+    },
     on: {
-      "keyup": _vm.findParent
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.msg = $event.target.value
+      }
+    }
+  }), _vm._v(" "), _c('button', {
+    on: {
+      "click": _vm.childClick
     }
   })])
 },staticRenderFns: []}
@@ -7041,38 +7118,69 @@ module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-6361c6dd", module.exports)
+     require("vue-hot-reload-api").rerender("data-v-2b495cf1", module.exports)
   }
 }
 
 /***/ }),
-/* 14 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(9);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(2)("672c780d", content, false);
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-1da59438!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Parent.vue", function() {
-     var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-1da59438!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Parent.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "template"
+  }, [_c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.msg),
+      expression: "msg"
+    }],
+    attrs: {
+      "type": "text"
+    },
+    domProps: {
+      "value": _vm._s(_vm.msg)
+    },
+    on: {
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.msg = $event.target.value
+      }
+    }
+  })])
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-2b577472", module.exports)
+  }
 }
 
 /***/ }),
-/* 15 */
+/* 17 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "tpl"
+  }, [_c('son1', {
+    on: {
+      "test": _vm.foo
+    }
+  }), _vm._v(" "), _c('son2'), _vm._v(" "), _c('p', [_vm._v(_vm._s(_vm.msg))])], 1)
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-e4b430cc", module.exports)
+  }
+}
+
+/***/ }),
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -7082,13 +7190,13 @@ var content = __webpack_require__(10);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("08626ce4", content, false);
+var update = __webpack_require__(2)("7d142d91", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-6361c6dd!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Child.vue", function() {
-     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-6361c6dd!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Child.vue");
+   module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-2b495cf1!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Son1.vue", function() {
+     var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-2b495cf1!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Son1.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -7098,7 +7206,59 @@ if(false) {
 }
 
 /***/ }),
-/* 16 */
+/* 19 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(11);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(2)("08f88974", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-2b577472!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Son2.vue", function() {
+     var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-2b577472!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Son2.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 20 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(12);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(2)("28acdc2c", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-e4b430cc!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./App.vue", function() {
+     var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-e4b430cc!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./App.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 21 */
 /***/ (function(module, exports) {
 
 /**
@@ -7131,7 +7291,7 @@ module.exports = function listToStyles (parentId, list) {
 
 
 /***/ }),
-/* 17 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7141,9 +7301,9 @@ var _vue = __webpack_require__(4);
 
 var _vue2 = _interopRequireDefault(_vue);
 
-var _Parent = __webpack_require__(3);
+var _App = __webpack_require__(3);
 
-var _Parent2 = _interopRequireDefault(_Parent);
+var _App2 = _interopRequireDefault(_App);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -7156,7 +7316,7 @@ new _vue2.default({
   //   return (create(APP))
   // },
   render: function render(c) {
-    return c(_Parent2.default);
+    return c(_App2.default);
   }
 });
 //引入app.vue组件

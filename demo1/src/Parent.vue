@@ -9,7 +9,8 @@
   export default {
     data() {
       return {
-        msg:""
+        msg:"囧"
+
       }
     },
     components:{
